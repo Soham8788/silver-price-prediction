@@ -199,3 +199,10 @@ st.markdown("---")
 st.caption("📊 Data source: Yahoo Finance (SLV - iShares Silver Trust)")
 st.caption("🔧 Built with Streamlit, yfinance, and scikit-learn")
 st.caption(f"📅 Data last updated: {data.index[-1].strftime('%Y-%m-%d')}")
+
+
+# Add at the very end of app.py (after all your existing code)
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 8501))
+    # Streamlit will handle the server configuration
